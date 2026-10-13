@@ -55,7 +55,6 @@ Customer support usage
 Project Structure
 ml-portfolio-project/
 
-│
 ├── data/
 │   ├── raw/
 │   └── processed/
@@ -151,7 +150,6 @@ Follow machine learning engineering best practices
 Achieve strong predictive performance
 Demonstrate end-to-end pipeline development
 Be suitable for inclusion in a professional portfolio
-
 Dataset Selection
 Dataset
 IBM Telco Customer Churn Dataset
