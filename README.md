@@ -151,3 +151,42 @@ Follow machine learning engineering best practices
 Achieve strong predictive performance
 Demonstrate end-to-end pipeline development
 Be suitable for inclusion in a professional portfolio
+
+Dataset Selection
+Dataset
+IBM Telco Customer Churn Dataset
+
+Description
+The dataset contains customer demographic information, account information, subscribed services, and customer churn status.
+
+The objective is to predict whether a customer will leave the company's service.
+
+Target Variable
+Churn
+
+Yes = Customer churned
+No = Customer retained
+Expected Features
+Gender
+Senior Citizen Status
+Partner
+Dependents
+Tenure
+Phone Service
+Internet Service
+Contract Type
+Payment Method
+Monthly Charges
+Total Charges
+Why This Dataset?
+This dataset is well-suited for machine learning engineering because it contains:
+
+Numerical and categorical variables
+Missing values to handle
+Opportunities for feature engineering
+A business-focused prediction task
+A binary classification target
+Machine Learning Task
+Binary Classification
+
+Predict whether a customer is likely to churn based on customer characteristics and service usage.
