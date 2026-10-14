@@ -189,3 +189,6 @@ Machine Learning Task
 Binary Classification
 
 Predict whether a customer is likely to churn based on customer characteristics and service usage.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
