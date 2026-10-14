@@ -1,59 +1,78 @@
-Customer Churn Prediction Pipeline
+# Customer Churn Prediction Pipeline
 
-Author
+## Author
+
 Wayne Franz
 
-Project Overview
-This portfolio project demonstrates an end-to-end machine learning workflow for predicting customer churn.
+---
 
-Customer churn occurs when a customer stops using a company's products or services. Predicting churn allows businesses to proactively identify at-risk customers and implement retention strategies before customers leave.
+# Project Overview
 
-The project will be developed using professional machine learning engineering practices and will result in a reproducible, production-ready machine learning pipeline.
+This project demonstrates an end-to-end machine learning workflow for predicting customer churn using Python, Scikit-Learn, Jupyter Notebook, and Git.
 
-Business Problem
-Customer acquisition is often more expensive than customer retention.
+Customer churn occurs when a customer stops using a company's products or services. By predicting churn, businesses can proactively identify customers at risk of leaving and implement retention strategies before churn occurs.
 
-The objective of this project is to build a machine learning model capable of predicting whether a customer is likely to churn based on demographic, account, and service usage information.
+The project follows professional machine learning engineering practices and includes data exploration, preprocessing, model development, model comparison, and deployment-ready pipeline creation.
 
-By identifying customers with a high probability of churning, a business can:
+---
 
-Improve customer retention
-Reduce revenue loss
-Increase customer lifetime value
-Improve marketing efficiency
-Support data-driven decision making
-Project Goals
-The goals of this project are to:
+# Business Problem
 
-Build a complete machine learning workflow
-Perform exploratory data analysis (EDA)
-Clean and preprocess raw data
-Engineer meaningful features
-Compare multiple machine learning models
-Tune model hyperparameters
-Build a reusable machine learning pipeline
-Evaluate model performance
-Save and document the final model
-Showcase machine learning engineering skills in a professional portfolio
-Dataset
-Target Variable
-Customer Churn
+Customer acquisition is typically more expensive than customer retention.
 
-0 = Customer Retained
-1 = Customer Churned
-Potential Features
-Customer information may include:
+The objective of this project is to develop a machine learning model capable of predicting whether a customer is likely to churn based on demographic information, account details, billing information, and service usage patterns.
 
-Customer demographics
-Contract type
-Service subscriptions
-Internet service type
-Payment method
-Monthly charges
-Total charges
-Account tenure
-Customer support usage
-Project Structure
+Accurate churn prediction can help organizations:
+
+- Improve customer retention
+- Reduce revenue loss
+- Increase customer lifetime value
+- Improve marketing effectiveness
+- Support data-driven business decisions
+
+---
+
+# Dataset
+
+## Dataset Source
+
+IBM Telco Customer Churn Dataset
+
+## Machine Learning Task
+
+**Binary Classification**
+
+Predict whether a customer is likely to churn.
+
+### Target Variable
+
+**Churn**
+
+- Yes = Customer Churned
+- No = Customer Retained
+
+### Features
+
+The dataset includes:
+
+- Customer demographics
+- Senior citizen status
+- Partner status
+- Dependents
+- Account tenure
+- Internet service type
+- Contract type
+- Payment method
+- Monthly charges
+- Total charges
+- Service subscriptions
+- Technical support usage
+
+---
+
+# Project Structure
+
+```text
 ml-portfolio-project/
 
 ├── data/
@@ -69,126 +88,201 @@ ml-portfolio-project/
 │   ├── 06_model_comparison.ipynb
 │   └── 07_final_pipeline.ipynb
 │
-├── src/
-│   ├── config.py
-│   ├── preprocessing.py
-│   ├── feature_engineering.py
-│   ├── modeling.py
-│   ├── evaluation.py
-│   └── utils.py
-│
 ├── models/
 │   └── trained_models/
 │
 ├── reports/
 │   ├── figures/
-│   └── presentation/
+│   └── presentations/
+│
+├── src/
+│   ├── config.py
+│   ├── evaluation.py
+│   └── __init__.py
 │
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 └── .gitignore
-Workflow
-Phase 1: Data Understanding
-Load dataset
-Review structure
-Examine data types
-Identify target variable
-Identify missing values
-Phase 2: Exploratory Data Analysis
-Descriptive statistics
-Distribution analysis
-Correlation analysis
-Churn analysis
-Visualization development
-Phase 3: Data Preparation
-Missing value treatment
-Categorical encoding
-Feature scaling
-Data splitting
-Phase 4: Feature Engineering
-Create derived features
-Evaluate feature importance
-Remove redundant variables
-Phase 5: Model Development
-Models to evaluate may include:
+```
 
-Logistic Regression
-Decision Tree
-Random Forest
-Gradient Boosting
-XGBoost (optional)
-Phase 6: Hyperparameter Tuning
-Grid Search
-Cross Validation
-Pipeline optimization
-Phase 7: Final Pipeline
-Build end-to-end pipeline
-Save trained model
-Export reproducible workflow
-Evaluation Metrics
-Model performance will be evaluated using:
+---
 
-Accuracy
-Precision
-Recall
-F1 Score
-ROC-AUC
-Because customer churn datasets are frequently imbalanced, special attention will be given to Recall, F1 Score, and ROC-AUC.
+# Technology Stack
 
-Expected Deliverables
-Professional GitHub repository
-Jupyter notebooks
-Reusable Python modules
-Trained machine learning model
-Final machine learning pipeline
-Visualizations and reports
-Project documentation
-Success Criteria
-A successful project will:
+## Programming Language
 
-Produce reproducible results
-Follow machine learning engineering best practices
-Achieve strong predictive performance
-Demonstrate end-to-end pipeline development
-Be suitable for inclusion in a professional portfolio
-Dataset Selection
-Dataset
-IBM Telco Customer Churn Dataset
+- Python
 
-Description
-The dataset contains customer demographic information, account information, subscribed services, and customer churn status.
+## Libraries
 
-The objective is to predict whether a customer will leave the company's service.
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- Joblib
 
-Target Variable
-Churn
+## Development Tools
 
-Yes = Customer churned
-No = Customer retained
-Expected Features
-Gender
-Senior Citizen Status
-Partner
-Dependents
-Tenure
-Phone Service
-Internet Service
-Contract Type
-Payment Method
-Monthly Charges
-Total Charges
-Why This Dataset?
-This dataset is well-suited for machine learning engineering because it contains:
+- VS Code
+- Jupyter Notebook
+- Git
+- GitHub
 
-Numerical and categorical variables
-Missing values to handle
-Opportunities for feature engineering
-A business-focused prediction task
-A binary classification target
-Machine Learning Task
-Binary Classification
+---
 
-Predict whether a customer is likely to churn based on customer characteristics and service usage.
+# Project Workflow
 
-License
+## Phase 1: Data Understanding
+
+- Load dataset
+- Explore dataset structure
+- Examine data types
+- Identify missing values
+- Investigate target variable
+
+## Phase 2: Exploratory Data Analysis (EDA)
+
+- Distribution analysis
+- Churn analysis
+- Feature relationship analysis
+- Data visualization
+- Business insight generation
+
+## Phase 3: Feature Engineering
+
+- Data cleaning
+- TotalCharges correction
+- Removal of identifier fields
+- Train-test split
+- Feature preprocessing pipelines
+- One-Hot Encoding
+- Feature scaling
+
+## Phase 4: Baseline Modelling
+
+- Logistic Regression baseline model
+- Performance evaluation
+
+## Phase 5: Model Comparison
+
+Models evaluated:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Gradient Boosting
+
+## Phase 6: Final Pipeline
+
+- Final model selection
+- Production pipeline creation
+- Model serialization
+- Deployment preparation
+
+---
+
+# Exploratory Data Analysis Findings
+
+The strongest predictors of customer churn were:
+
+- Customer tenure
+- Contract type
+- Internet service type
+- Monthly charges
+
+Key observations included:
+
+- Month-to-month customers churn more frequently
+- Customers with shorter tenure are more likely to churn
+- Fiber Optic customers exhibit higher churn rates
+- Customers with higher monthly charges are more likely to churn
+
+---
+
+# Model Performance
+
+## Models Evaluated
+
+| Model | Accuracy | Precision | Recall | F1 Score | ROC-AUC |
+|---------|---------|---------|---------|---------|---------|
+| Logistic Regression | 0.8038 | 0.6485 | 0.5722 | 0.6080 | 0.8359 |
+| Gradient Boosting | 0.7967 | 0.6429 | 0.5294 | 0.5806 | 0.8386 |
+| Random Forest | 0.7875 | 0.6307 | 0.4840 | 0.5477 | 0.8137 |
+| Decision Tree | 0.7306 | 0.4934 | 0.4973 | 0.4953 | 0.6565 |
+
+---
+
+# Final Model
+
+## Selected Model
+
+**Logistic Regression**
+
+Although Gradient Boosting achieved a slightly higher ROC-AUC score, Logistic Regression was selected because it delivered:
+
+- Highest Accuracy
+- Highest Precision
+- Highest Recall
+- Highest F1 Score
+- Excellent interpretability
+- Simpler deployment
+
+### Final Performance
+
+| Metric | Score |
+|----------|----------|
+| Accuracy | 0.8038 |
+| Precision | 0.6485 |
+| Recall | 0.5722 |
+| F1 Score | 0.6080 |
+| ROC-AUC | 0.8359 |
+
+---
+
+# Project Deliverables
+
+This project includes:
+
+- Professional GitHub repository
+- Well-documented Jupyter notebooks
+- Data visualizations
+- Feature engineering pipeline
+- Model comparison framework
+- Production-ready machine learning pipeline
+- Saved deployment artifact
+
+---
+
+# Key Skills Demonstrated
+
+- Data Cleaning
+- Exploratory Data Analysis
+- Feature Engineering
+- Machine Learning
+- Model Evaluation
+- Pipeline Construction
+- Git Version Control
+- Technical Documentation
+- Deployment Preparation
+
+---
+
+# Future Improvements
+
+Potential future enhancements include:
+
+- Hyperparameter tuning using GridSearchCV
+- Cross-validation analysis
+- Feature importance investigation
+- SHAP explainability
+- XGBoost implementation
+- Streamlit deployment
+- Cloud deployment using Azure Machine Learning
+
+---
+
+# License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
